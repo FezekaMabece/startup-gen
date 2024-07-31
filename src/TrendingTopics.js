@@ -7,9 +7,9 @@ const TrendingTopics = () => {
   useEffect(() => {
     // Mock data for trending topics
     const mockTopics = [
-      { id: 1, name: '#TrendingTopic1' },
-      { id: 2, name: '#TrendingTopic2' },
-      { id: 3, name: '#TrendingTopic3' },
+      { id: 1, name: '#TrendingTopic1', summary: '', source: '', date:'' },
+      { id: 1, name: '#TrendingTopic2', summary: '', source: '', date:'' },
+      { id: 1, name: '#TrendingTopic3', summary: '', source: '', date:'' },
     ];
 
     setTopics(mockTopics);

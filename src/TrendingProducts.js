@@ -7,9 +7,10 @@ const TrendingProducts = () => {
   useEffect(() => {
     // Mock data for trending products
     const mockProducts = [
-      { id: 1, name: 'Product 1', price: '$10' },
-      { id: 2, name: 'Product 2', price: '$20' },
-      { id: 3, name: 'Product 3', price: '$30' },
+      { id: 1, name: 'Product 1', image: '' , price: '$10', source : '', date: '' },
+      { id: 1, name: 'Product 2', image: '' , price: '$20', source : '', date: '' },
+      { id: 1, name: 'Product 3', image: '' , price: '$30', source : '', date: '' },
+
     ];
 
     setProducts(mockProducts);
@@ -39,7 +40,7 @@ const TrendingProducts = () => {
             return (
               <li class="d-flex">
           <div class="flex-shrink-0">
-            <img src="#" alt="" width="300" />
+            <img src={product.image} alt="" width="300" />
           </div>
           <div class="flex-grow-1 ms-3">
             <h5 class="mt-0">{product.name}</h5>
@@ -48,6 +49,7 @@ const TrendingProducts = () => {
               this with any content and adjust it as needed.
             </p>
             <p className='blockquote-footer'>{product.price}</p>
+            <a href={product.source}>source</a>
           </div>
         </li>
             )
