@@ -1,7 +1,6 @@
 import React from 'react';
 import './App.css';
 import TrendingProducts from './TrendingProducts';
-import TrendingTopics from './TrendingTopics';
 
 function App() {
   return (
@@ -11,7 +10,6 @@ function App() {
       </header>
       <main>
         <TrendingProducts />
-        <TrendingTopics />
       </main>
     </div>
   );
