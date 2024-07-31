@@ -34,7 +34,7 @@ const TrendingProducts = () => {
           categories.map((category) => {
             let categorycount = 0;
             return (
-              <div className='row'>
+              <div className=''>
                 <h4>{category}</h4>
                 <ul class="list-group list-group-horizontal position-relative overflow-auto w-100">
                 
@@ -48,7 +48,7 @@ const TrendingProducts = () => {
                         <li  style={{
                         width:"400px",
             
-                      }} key={product.product_name} className="list-group-item product-card m-1 col-xl-auto col-lg-auto col-md-auto col-sm-auto col-xs-auto">
+                      }} key={product.product_name} className="list-group-item product-card m-1 col-auto">
                         <img src={product.image_url} alt={product.name} />
                         <p>{product.product_name}</p>
                         <p>Date Sourced: {moment(product.date_scraped).utc().format('YYYY-MM-DD')}</p>
