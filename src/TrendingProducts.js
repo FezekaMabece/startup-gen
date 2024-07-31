@@ -1,3 +1,4 @@
+import axios from 'axios';
 import React, { useEffect, useState } from 'react';
 
 const TrendingProducts = () => {
@@ -14,48 +15,46 @@ const TrendingProducts = () => {
     setProducts(mockProducts);
   }, []);
 
+  const getProducts = async () => {
+    await axios.get(' https://nerd-biz-bot.vercel.app/products')
+    .then((res) => {
+      console.log(res);
+      // setProducts(res.data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
   
+  useEffect(() => {
+    getProducts()
+  }, [])
 
   return (
     <div>
       <h2>Trending Products</h2>
       <ul class="list-unstyled">
-        <li class="d-flex">
+        {
+          products.map((product) => {
+            return (
+              <li class="d-flex">
           <div class="flex-shrink-0">
             <img src="#" alt="" width="300" />
           </div>
           <div class="flex-grow-1 ms-3">
-            <h5 class="mt-0">Media heading</h5>
+            <h5 class="mt-0">{product.name}</h5>
             <p>
               This is some content from a media component. You can replace
               this with any content and adjust it as needed.
             </p>
+            <p className='blockquote-footer'>{product.price}</p>
           </div>
         </li>
-        <li class="d-flex">
-          <div class="flex-shrink-0">
-            <img src="#" alt="" width="" />
-          </div>
-          <div class="flex-grow-1 ms-3">
-            <h5 class="mt-0">Media heading</h5>
-            <p>
-              This is some content from a media component. You can
-              replace this with any content and adjust it as needed.
-            </p>
-          </div>
-        </li>
-        <li class="d-flex">
-          <div class="flex-shrink-0">
-            <img src="#" alt="" width="" />
-          </div>
-          <div class="flex-grow-1 ms-3">
-            <h5 class="mt-0">Media heading</h5>
-            <p>
-              This is some content from a media component. You can
-              replace this with any content and adjust it as needed.
-            </p>
-          </div>
-        </li>
+            )
+          })
+        }
+        
+       
       </ul>
       
     </div>

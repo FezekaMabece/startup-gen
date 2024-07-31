@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const TrendingTopics = () => {
   const [topics, setTopics] = useState([]);
@@ -14,46 +15,43 @@ const TrendingTopics = () => {
     setTopics(mockTopics);
   }, []);
 
+  const getTopics = async () => {
+    await axios.get(' https://nerd-biz-bot.vercel.app/products')
+    .then((res) => {
+      console.log(res);
+      // setProducts(res.data)
+    })
+    .catch((err) => {
+      console.log(err)
+    })
+  }
+  
+  useEffect(() => {
+    getTopics()
+  }, []);
+
   return (
     <div>
       <h2>Trending Topics</h2>
       <ul class="list-unstyled">
-        <li class="d-flex">
+        {
+          topics.map((topic) => {
+            return (
+              <li class="d-flex">
           <div class="flex-shrink-0">
             <img src="#" alt="" width="300" />
           </div>
           <div class="flex-grow-1 ms-3">
-            <h5 class="mt-0">Media heading</h5>
+            <h5 class="mt-0">{topic.name}</h5>
             <p>
               This is some content from a media component. You can replace
               this with any content and adjust it as needed.
             </p>
           </div>
         </li>
-        <li class="d-flex">
-          <div class="flex-shrink-0">
-            <img src="#" alt="" width="" />
-          </div>
-          <div class="flex-grow-1 ms-3">
-            <h5 class="mt-0">Media heading</h5>
-            <p>
-              This is some content from a media component. You can
-              replace this with any content and adjust it as needed.
-            </p>
-          </div>
-        </li>
-        <li class="d-flex">
-          <div class="flex-shrink-0">
-            <img src="#" alt="" width="" />
-          </div>
-          <div class="flex-grow-1 ms-3">
-            <h5 class="mt-0">Media heading</h5>
-            <p>
-              This is some content from a media component. You can
-              replace this with any content and adjust it as needed.
-            </p>
-          </div>
-        </li>
+            )
+          })
+        }
       </ul>
       
     </div>
