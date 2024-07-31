@@ -14,16 +14,50 @@ const TrendingProducts = () => {
     setProducts(mockProducts);
   }, []);
 
+  
+
   return (
     <div>
       <h2>Trending Products</h2>
-      <ul>
-        {products.map(product => (
-          <li key={product.id}>
-            {product.name} - {product.price}
-          </li>
-        ))}
+      <ul class="list-unstyled">
+        <li class="d-flex">
+          <div class="flex-shrink-0">
+            <img src="#" alt="" width="300" />
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mt-0">Media heading</h5>
+            <p>
+              This is some content from a media component. You can replace
+              this with any content and adjust it as needed.
+            </p>
+          </div>
+        </li>
+        <li class="d-flex">
+          <div class="flex-shrink-0">
+            <img src="#" alt="" width="" />
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mt-0">Media heading</h5>
+            <p>
+              This is some content from a media component. You can
+              replace this with any content and adjust it as needed.
+            </p>
+          </div>
+        </li>
+        <li class="d-flex">
+          <div class="flex-shrink-0">
+            <img src="#" alt="" width="" />
+          </div>
+          <div class="flex-grow-1 ms-3">
+            <h5 class="mt-0">Media heading</h5>
+            <p>
+              This is some content from a media component. You can
+              replace this with any content and adjust it as needed.
+            </p>
+          </div>
+        </li>
       </ul>
+      
     </div>
   );
 };
