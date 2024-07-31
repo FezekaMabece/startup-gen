@@ -20,24 +20,54 @@ const TrendingProducts = () => {
     getProducts()
   }, [])
 
+
+    const categories = ["Kitchen", "Fashion", "Electronics", "Grocery", "Wireless", "Applications"]
+
+    
+    
+
   return (
     <div>
       <h2>Trending Products</h2>
-      <div className="row">
-        {products.map(product => (
-          <div style={{
-            width:"400px",
+      <p className='text-muted'>*can scroll horizontally</p>
+        {
+          categories.map((category) => {
+            let categorycount = 0;
+            return (
+              <div className='row'>
+                <h4>{category}</h4>
+                <ul class="list-group list-group-horizontal position-relative overflow-auto w-100">
+                
+                  
+                    {products.map(product => {
+                      console.log(product.category == category)
+                      if (product.category == category) {
+                        categorycount += 1;
 
-          }} key={product.product_name} className="product-card m-1 col-xl-auto col-lg-auto col-md-auto col-sm-auto col-xs-auto">
-            <img src={product.image_url} alt={product.name} />
-            <p>{product.product_name}</p>
-            <p>Price: {product.price}</p>
-            <p>Date Sourced: {moment(product.date_scraped).utc().format('YYYY-MM-DD')}</p>
-            <a href={product.source} target="_blank" rel="noopener noreferrer">Click Here To View Product</a>
-          </div>
-        ))}
+                        return (
+                        <li  style={{
+                        width:"400px",
+            
+                      }} key={product.product_name} className="list-group-item product-card m-1 col-xl-auto col-lg-auto col-md-auto col-sm-auto col-xs-auto">
+                        <img src={product.image_url} alt={product.name} />
+                        <p>{product.product_name}</p>
+                        <p>Date Sourced: {moment(product.date_scraped).utc().format('YYYY-MM-DD')}</p>
+                        <a href={product.source} target="_blank" rel="noopener noreferrer">Click Here To View Product</a>
+                      </li>
+                      )
+                    } 
+                    } 
+                    )}
+
+                </ul>
+                <p className='text-muted'>&uarr; {categorycount} items &uarr;</p>
+
+                  
+              </div>
+            )
+          })
+        }
       </div>
-    </div>
   );
 };
 
