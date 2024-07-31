@@ -23,6 +23,7 @@ h2 {
   background-color: #85af21;
   border: 1px solid #ddd;
   color: #161518;
+  min-width: 80vw;
 }
 
 ul {
@@ -38,18 +39,17 @@ li {
   border-radius: 5px;
 }
 
-.products-grid {
+/* .products-grid {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
-}
+} */
 
 .product-card {
   margin: 20px;
   padding: 20px;
   border: 1px solid #ddd;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-  width: calc(25% - 40px);
 }
 
 .product-card img {

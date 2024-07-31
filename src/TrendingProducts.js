@@ -21,11 +21,14 @@ const TrendingProducts = () => {
   }, [])
 
   return (
-    <div className="trending-products">
+    <div>
       <h2>Trending Products</h2>
-      <div className="products-grid">
+      <div className="row">
         {products.map(product => (
-          <div key={product.product_name} className="product-card">
+          <div style={{
+            width:"400px",
+
+          }} key={product.product_name} className="product-card m-1 col-xl-auto col-lg-auto col-md-auto col-sm-auto col-xs-auto">
             <img src={product.image_url} alt={product.name} />
             <p>{product.product_name}</p>
             <p>Price: {product.price}</p>
