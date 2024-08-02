@@ -24,6 +24,7 @@ To set up the project locally, follow these steps:
    git clone https://github.com/FezekaMabece/startup-gen
 
 2. Change into the project directory
+   ```sh
    cd startupgen
 
 3. Install dependencies:
@@ -31,6 +32,7 @@ To set up the project locally, follow these steps:
    npm install
 
 4. Start the application
+   ```sh
    npm start
 
 
