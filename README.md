@@ -35,10 +35,8 @@ To set up the project locally, follow these steps:
    ```sh
    npm start
 
-
 ## Usage
 Viewing Trending Products: Users can browse through trending products categorized by type (e.g., Kitchen, Fashion, Electronics).
-Exploring Trending Topics: Users can view trending topics, helping them stay up-to-date with current trends.
 Chatbot: The integrated chatbot can assist users by providing additional information and answering queries.
 
 ## Challenges and Solutions
