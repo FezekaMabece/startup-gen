@@ -1,13 +1,29 @@
+/* Reset margin and set font family for the body element */
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  font-family: 
+    -apple-system, /* San Francisco font on macOS */
+    BlinkMacSystemFont, /* WebKit-compatible font on macOS */
+    'Segoe UI', /* Font on Windows */
+    'Roboto', /* Font on Android */
+    'Oxygen', /* Font on Linux */
+    'Ubuntu', /* Font on Linux */
+    'Cantarell', /* Font on Linux */
+    'Fira Sans', /* Font on Linux */
+    'Droid Sans', /* Font on Android */
+    'Helvetica Neue', /* Font on macOS */
+    sans-serif; /* Fallback font */
+  -webkit-font-smoothing: antialiased; /* Enable font smoothing on WebKit browsers */
+  -moz-osx-font-smoothing: grayscale; /* Enable font smoothing on Firefox on macOS */
 }
 
+/* Set font family for code elements */
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+  font-family: 
+    source-code-pro, /* Font for code blocks */
+    Menlo, /* Font on macOS */
+    Monaco, /* Font on Windows */
+    Consolas, /* Font on Windows */
+    'Courier New', /* Font on Windows */
+    monospace; /* Fallback font */
 }
