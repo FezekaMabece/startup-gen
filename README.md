@@ -36,24 +36,24 @@ To set up the project locally, follow these steps:
    npm start
 
 
-##Usage
+## Usage
 Viewing Trending Products: Users can browse through trending products categorized by type (e.g., Kitchen, Fashion, Electronics).
 Exploring Trending Topics: Users can view trending topics, helping them stay up-to-date with current trends.
 Chatbot: The integrated chatbot can assist users by providing additional information and answering queries.
 
-##Challenges and Solutions
+## Challenges and Solutions
 Challenge 1: Aggregating data from various sources and ensuring its accuracy.
 Solution: Used Axios to fetch data from APIs and implemented error handling to manage potential issues.
 
 Challenge 2: Designing a user-friendly interface that accommodates large amounts of data.
 Solution: Utilized Bootstrap for responsive design and ensured smooth user experience across devices.
 
-##Team: NerdsThinkCode_
+## Team: NerdsThinkCode_
 Team Leader: Lebang Nong (lebangnong@gmail.com)
 Back-end Developer: Katlego Barayi (katlegobarayi07@gmail.com)
 Front-end Developer: Fezeka Mabece (fmabece@gmail.com)
 
-##What’s Next
+## What’s Next
 Additional Categories: Plan to expand product categories and sources.
 User Accounts: Enable user accounts for personalized experiences.
 Enhanced Chatbot Capabilities: Integrate more advanced natural language processing features.
