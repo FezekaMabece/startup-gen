@@ -5,7 +5,6 @@
 
 ## Features
 - **Trending Products:** Displays a list of currently trending products across various categories.
-- **Trending Topics:** Showcases trending topics to keep users informed about the latest discussions and trends.
 - **Chatbot Integration:** Includes a chatbot to provide personalized assistance and answers to user queries.
 
 ## Tech Stack
@@ -23,9 +22,11 @@ To set up the project locally, follow these steps:
 1. Clone the repository:
    ```sh
    git clone https://github.com/FezekaMabece/startup-gen
-
+2. 
 ###cd startupgen
+3. 
 ###npm install
+4. 
 ###npm start
 
 
@@ -36,17 +37,17 @@ Chatbot: The integrated chatbot can assist users by providing additional informa
 
 Challenges and Solutions
 Challenge 1: Aggregating data from various sources and ensuring its accuracy.
-
 Solution: Used Axios to fetch data from APIs and implemented error handling to manage potential issues.
-Challenge 2: Designing a user-friendly interface that accommodates large amounts of data.
 
+Challenge 2: Designing a user-friendly interface that accommodates large amounts of data.
 Solution: Utilized Bootstrap for responsive design and ensured smooth user experience across devices.
 
-##Team: NerdsThinkCode
-Team Leader - Lebang Nong
-Back-end - Katlego Barayi
-Front-end - Fezeka Mabece
-What’s Next
+Team: NerdsThinkCode_
+Team Leader: Lebang Nong (lebangnong@gmail.com)
+Back-end Developer: Katlego Barayi (katlegobarayi07@gmail.com)
+Front-end Developer: Fezeka Mabece (fmabece@gmail.com)
+
+##What’s Next
 Additional Categories: Plan to expand product categories and sources.
 User Accounts: Enable user accounts for personalized experiences.
 Enhanced Chatbot Capabilities: Integrate more advanced natural language processing features.
